@@ -1,0 +1,255 @@
+/******************************************************************
+Stylesheet: ベーススタイル
+******************************************************************/
+
+body {
+    font-family: "Kiwi Maru", "Nanum Pen Script", "RocknRoll One", sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+.font-sm {
+    font-size: 14px;
+}
+.font-md {
+    font-size: 17px;
+}
+.font-lr {
+    font-size: 17px;
+}
+.font-lg {
+    font-size: 25px;
+}
+.mb-sm {
+    margin-bottom: 16px !important;
+}
+.mb-lg {
+    margin-bottom: 80px !important;
+}
+.pb-sm {
+    padding-bottom: 16px !important;
+}
+.pb-lg {
+    padding-bottom: 80px !important;
+}
+
+.flex{
+    display: flex;
+}
+.flex_row {
+    @extend .flex;
+    flex-direction: row;
+}
+.flex_column{
+    @extend .flex;
+    flex-direction: column;
+}
+.inline{
+    display: inline;
+}
+.position{
+    position: relative;
+}
+
+#global-container{
+    @extend .position;
+}
+
+.header{
+    background-color: $cOrange;
+    position: fixed;
+    @extend .flex_row;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $cheadHeight;
+    z-index: 100;
+
+    &__moji{
+        color: $cWhite;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+        @extend .font-lg;
+    }
+
+    ul{
+        width: 40%;
+
+        li{
+            display: inline;
+            vertical-align: middle;
+            & > a{
+                text-decoration: none !important;
+            }
+        }
+        img{
+            padding-left: 5px;
+            width: 30%;
+        }
+    }
+}
+
+.title{
+    
+    background-color: $cWineRed;
+    padding-top: 70px;
+
+    &__link{
+        @extend .flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        a{
+            width: 45%;
+        }
+    }
+}
+
+.instagram__upload{
+    @extend .flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    img{
+        width: 45%;
+        padding: 10px 5px;
+    }
+}
+
+.main__manu_1{
+
+    .main-title{
+        @extend .flex;
+        padding-top: 30px;
+        
+        &__pan{
+            width: 10%;
+            height: 10%;
+        }
+        &__medaka{
+            width: 10%;
+            height: 10%;
+        }
+        &__moji{
+            padding-left: 10px;
+            @extend .font-lg;
+            font-weight: bold;
+        }
+    }
+
+    .main__syoukai{
+        padding-top: 25px;
+        padding-left: 20px;
+        @extend .flex;
+        flex-wrap: wrap;
+
+        img{
+            width: 10%;
+            height: 10%;
+        }
+        .sub-title{
+            padding-left: 10px;
+            width: 80%;
+            @extend .font-lr;
+        }
+        .sentence{
+            padding-top: 10px;
+            @extend .font-md;
+        }
+    }
+}
+
+.main__manu_2{
+    z-index: -10;
+    @extend .main__manu_1;
+
+    .sub-title{
+        @extend .flex;
+        @extend .font-lg;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-decoration:underline solid black;
+        padding-bottom: 20px;
+
+    }
+    .swiper-container_1{
+        .swiper-slide{
+            @extend .flex_column;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                width: 250px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+
+            }
+
+            .swiper-title{
+                @extend .font-lr;
+            }
+        }
+    }
+
+    .swiper-container_2{
+        @extend .swiper-container_1;
+    }
+    
+}
+
+.main__manu_3{
+    padding-top: 50px;
+
+    @extend .main__manu_1;
+}
+
+.main__manu_4{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    @extend .main__manu_1;
+
+    .set-img{
+        @extend .flex;
+        background-color: $cBrown;
+
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img{
+            width: 25%;
+            padding: 10px 30px;
+        }
+    }
+
+    .onlineshop_moji{
+        background-color: $cBrown;
+        @extend .font-lr;
+        color: $cWhite;
+        padding-left: 30px;
+    }
+}
+
+
+.main__manu_5{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    @extend .main__manu_1;
+}
+
+.footer{
+    background-color: $cBlack;
+
+    &__moji{
+        padding: 10px 10px;
+        color: $cWhite;
+        @extend .font-md;
+    }
+}
